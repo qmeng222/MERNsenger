@@ -15,6 +15,6 @@ MERNsenger is a complete real time live chat application built using the MERN st
 2. (frontend) setup frontend: `npm i axios moment jwt-decode node-sass react-alert react-alert-template-basic react-hot-toast react icons react-redux redux redux-thunk react-router-dom socket.io-client`
 3. (root) create a new `package.json` file with default values: `npm init --y`
 4. (root) setup backend: `npm i bcrypt body-parser concurrently cookie-parser dotenv express formidable jsonwebtoken mongoose nodemon validator`
-5. frontend: port 3000, `npm start`
-   backend: port 8000, `npm run server`
-6. temp
+5. - [ ] frontend: port 3000, `npm start`
+   - [ ] backend: port 8000, `npm run server`
+   - [x] run commands concurrently: `npm run dev`

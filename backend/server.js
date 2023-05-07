@@ -8,5 +8,5 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Hello from the backend👋");
+  res.send("Hello from backend server👋");
 });
