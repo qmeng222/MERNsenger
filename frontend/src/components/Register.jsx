@@ -55,7 +55,7 @@ const Register = () => {
               <div className="file-image">
                 <div className="image"></div>
                 <div className="file">
-                  <label htmlFor="image">Select image:</label>
+                  <label htmlFor="image">select image</label>
                   <input type="file" className="form-control" id="image" />
                 </div>
               </div>
@@ -67,7 +67,7 @@ const Register = () => {
 
             <div className="form-group">
               <span>
-                <Link to="/login"> Login Your Account </Link>
+                <Link to="/login">Login</Link>
               </span>
             </div>
           </form>
