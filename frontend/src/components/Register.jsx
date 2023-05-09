@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+  const [state, setstate] = useState({
+    userName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    image: "",
+  });
+
+  const inputHendle = (e) => {
+    setstate({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <div className="register">
       <div className="card">
@@ -15,6 +30,9 @@ const Register = () => {
               <label htmlFor="username">Username:</label>
               <input
                 type="text"
+                onChange={inputHendle}
+                name="userName"
+                value={state.userName}
                 className="form-control"
                 id="username"
                 placeholder="username"
@@ -25,6 +43,9 @@ const Register = () => {
               <label htmlFor="email">Email:</label>
               <input
                 type="email"
+                onChange={inputHendle}
+                name="email"
+                value={state.email}
                 className="form-control"
                 id="email"
                 placeholder="email"
@@ -35,6 +56,9 @@ const Register = () => {
               <label htmlFor="password">Password:</label>
               <input
                 type="password"
+                onChange={inputHendle}
+                name="password"
+                value={state.password}
                 className="form-control"
                 id="password"
                 placeholder="password"
@@ -45,6 +69,9 @@ const Register = () => {
               <label htmlFor="confirmPassword">Confirm password:</label>
               <input
                 type="password"
+                onChange={inputHendle}
+                name="confirmPassword"
+                value={state.confirmPassword}
                 className="form-control"
                 id="confirmPassword"
                 placeholder="confirm password"
