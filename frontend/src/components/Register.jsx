@@ -17,6 +17,20 @@ const Register = () => {
     });
   };
 
+  const fileHendle = (e) => {
+    if (e.target.files.length !== 0) {
+      setstate({
+        ...state,
+        [e.target.name]: e.target.files[0],
+      });
+    }
+  };
+
+  const register = (e) => {
+    e.preventDefault();
+    console.log(state);
+  };
+
   return (
     <div className="register">
       <div className="card">
@@ -25,7 +39,7 @@ const Register = () => {
         </div>
 
         <div className="card-body">
-          <form>
+          <form onSubmit={register}>
             <div className="form-group">
               <label htmlFor="username">Username:</label>
               <input
@@ -83,7 +97,12 @@ const Register = () => {
                 <div className="image"></div>
                 <div className="file">
                   <label htmlFor="image">select image</label>
-                  <input type="file" className="form-control" id="image" />
+                  <input
+                    type="file"
+                    onChange={fileHendle}
+                    className="form-control"
+                    id="image"
+                  />
                 </div>
               </div>
             </div>
