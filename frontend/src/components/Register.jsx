@@ -38,7 +38,7 @@ const Register = () => {
   };
 
   const register = (e) => {
-    // console.log(state);
+    console.log(state);
     const { userName, email, password, confirmPassword, image } = state;
 
     e.preventDefault();
@@ -138,7 +138,7 @@ const Register = () => {
 
             <div className="form-group">
               <span>
-                <Link to="/login">Log in</Link>
+                <Link to="/messenger/login">Log in</Link>
               </span>
             </div>
           </form>
